@@ -4,6 +4,8 @@ Retrieval-augmented generation pipeline that answers questions about your PDFs, 
 
 **Stack:** Python, LangChain, ChromaDB, Hugging Face Transformers (sentence-transformers embeddings), OpenAI.
 
+> You can use any LLM Model and it's respective API Key, for this project I've used OpenAI.
+
 ## How it works
 1. **Ingest** – `PyPDFLoader` reads each page, `RecursiveCharacterTextSplitter` makes ~1000-char overlapping chunks.
 2. **Embed + store** – chunks are embedded locally with a Hugging Face model and persisted in ChromaDB.
